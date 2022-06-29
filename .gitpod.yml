@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - before: sh /workspace/phantom-sph/setup.sh
-  - init: sh /workspace/phantom-sph/setup-init.sh
+  - before: sh setup.sh
+  - init: sh setup-init.sh
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
