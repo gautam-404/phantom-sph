@@ -12,9 +12,9 @@ echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
 echo "ulimit -s unlimited" >> ~/.zshrc
 
 
-DIR="/home/project/Data Files/"
+DIR="/workspace/phanton-sph/phantom"
 if [ -d "$DIR" ]; then
-  echo "Warning: '$DIR' NOT found."
+  echo "Warning: '$DIR' already exists!"
 else
   git clone https://github.com/danieljprice/phantom.git
   cd phantom
