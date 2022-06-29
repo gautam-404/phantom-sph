@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt-get install -y build-essential gfortran \
+sudo apt install -y build-essential gfortran \
   libopenmpi-dev openmpi-bin \
   libgsl-dev cmake libfftw3-3 libfftw3-dev \
   libgmp3-dev libmpfr6 libmpfr-dev \
