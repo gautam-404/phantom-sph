@@ -11,7 +11,6 @@ echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
 echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
 echo "ulimit -s unlimited" >> ~/.zshrc
 
-echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
 
 git clone https://github.com/danieljprice/phantom.git
@@ -20,6 +19,7 @@ cd phantom
 export OMP_SCHEDULE="dynamic"
 export OMP_STACKSIZE=512M
 ulimit -s unlimited
+echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
 make test
 
