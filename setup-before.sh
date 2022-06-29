@@ -13,4 +13,4 @@ echo "ulimit -s unlimited" >> ~/.zshrc
 
 echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
-echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
+
