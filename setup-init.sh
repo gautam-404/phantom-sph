@@ -12,22 +12,26 @@ echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
 echo "ulimit -s unlimited" >> ~/.zshrc
 
 
+DIR="/home/project/Data Files/"
+if [ -d "$DIR" ]; then
+  echo "Warning: '$DIR' NOT found."
+else
+  git clone https://github.com/danieljprice/phantom.git
+  cd phantom
 
-git clone https://github.com/danieljprice/phantom.git
-cd phantom
+  export OMP_SCHEDULE="dynamic"
+  export OMP_STACKSIZE=512M
+  ulimit -s unlimited
+  echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
-export OMP_SCHEDULE="dynamic"
-export OMP_STACKSIZE=512M
-ulimit -s unlimited
-echo "export SYSTEM=gfortran"  >> ~/.zshrc
+  make test
 
-make test
+  echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
 
-echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
+  cd ..
+  mkdir scratch
+  cd scratch
 
-cd ..
-mkdir scratch
-cd scratch
-
-phantom_writemake sedov > Makefile
+  phantom_writemake sedov > Makefile
+ fi
 
