@@ -32,5 +32,5 @@ else
   cd scratch
 
   phantom_writemake sedov > Makefile
- fi
+fi
 
