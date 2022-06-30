@@ -1,4 +1,4 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - before: sh setup-before.sh
-  - init: sh setup-init.sh
+    init: sh setup-init.sh
