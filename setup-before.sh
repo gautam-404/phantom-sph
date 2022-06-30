@@ -13,7 +13,10 @@ echo "ulimit -s unlimited" >> ~/.zshrc
 
 echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
-zsh
+export OMP_SCHEDULE='dynamic'
+export OMP_STACKSIZE=512M
+ulimit -s unlimited
+export SYSTEM=gfortran
 
 DIR="/workspace/phanton-sph/phantom"
 if [ -d "$DIR" ]; then
