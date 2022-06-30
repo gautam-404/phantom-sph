@@ -20,7 +20,7 @@ export OMP_STACKSIZE=512M
 ulimit -s unlimited
 export SYSTEM=gfortran
 
-make test
+# make test
 
 echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
 
