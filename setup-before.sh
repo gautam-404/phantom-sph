@@ -7,10 +7,35 @@ sudo apt install -y build-essential gfortran \
   libblas-dev liblapack-dev splash
 yes | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
-# echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
-# echo "ulimit -s unlimited" >> ~/.zshrc
+echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
+echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
+echo "ulimit -s unlimited" >> ~/.zshrc
 
-# echo "export SYSTEM=gfortran"  >> ~/.zshrc
+echo "export SYSTEM=gfortran"  >> ~/.zshrc
+
+zsh
+
+DIR="/workspace/phanton-sph/phantom"
+if [ -d "$DIR" ]; then
+  echo "Warning: '$DIR' already exists!"
+else
+  git clone https://github.com/danieljprice/phantom.git
+  cd phantom
+
+  export OMP_SCHEDULE="dynamic"
+  export OMP_STACKSIZE=512M
+  ulimit -s unlimited
+  echo "export SYSTEM=gfortran"  >> ~/.zshrc
+
+  make test
+
+  echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
+
+  cd ..
+  mkdir scratch
+  cd scratch
+
+  phantom_writemake sedov > Makefile
+fi
 
 
