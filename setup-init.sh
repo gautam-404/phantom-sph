@@ -28,4 +28,4 @@ cd ..
 mkdir scratch
 cd scratch
 
-phantom_writemake sedov > Makefile
+/workspaces/phantom-sph/phantom/scripts/writemake.sh sedov > Makefile
