@@ -22,10 +22,10 @@ export SYSTEM=gfortran
 
 # make test
 
-echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
+echo "alias phantom_writemake=/workspace/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
 
 cd ..
 mkdir scratch
 cd scratch
 
-/workspaces/phantom-sph/phantom/scripts/writemake.sh sedov > Makefile
+/workspace/phantom-sph/phantom/scripts/writemake.sh sedov > Makefile
