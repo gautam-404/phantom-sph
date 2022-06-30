@@ -7,10 +7,10 @@ sudo apt install -y build-essential gfortran \
   libblas-dev liblapack-dev splash
 yes | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
-echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
-echo "ulimit -s unlimited" >> ~/.zshrc
+# echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
+# echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
+# echo "ulimit -s unlimited" >> ~/.zshrc
 
-echo "export SYSTEM=gfortran"  >> ~/.zshrc
+# echo "export SYSTEM=gfortran"  >> ~/.zshrc
 
 
