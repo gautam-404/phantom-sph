@@ -11,4 +11,4 @@ echo "export OMP_SCHEDULE='dynamic'" >> ~/.zshrc
 echo "export OMP_STACKSIZE=512M" >> ~/.zshrc
 echo "ulimit -s unlimited" >> ~/.zshrc
 echo "export SYSTEM=gfortran"  >> ~/.zshrc
-echo "alias phantom_writemake=/workspaces/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
+echo "alias phantom_writemake=/workspace/phantom-sph/phantom/scripts/writemake.sh"  >> ~/.zshrc
